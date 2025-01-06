@@ -9,7 +9,7 @@ const Create =()=>{
     const navigate=useNavigate();
      const submit =(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:3000/api/user/create',{name,email,address})
+        axios.post('https://backend-demo-4okq.onrender.com/api/user/create',{name,email,address})
             .then(result=>{
                 console.log(result.data);
                 navigate('/user');

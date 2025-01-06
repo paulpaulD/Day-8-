@@ -8,7 +8,7 @@ function User() {
     const nav=useNavigate();
     const [user, setUser] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:3000/api/user/fetch")
+        axios.get("https://backend-demo-4okq.onrender.com/api/user/fetch")
         .then(result=>{
            
             setUser(result.data.users)
@@ -19,7 +19,7 @@ function User() {
     },[])
 
     const deleteUser=(id)=>{
-        axios.delete(`http://localhost:3000/api/user/delete/${id}`)
+        axios.delete(`https://backend-demo-4okq.onrender.com/api/user/delete/${id}`)
         .then(result=>{
             console.log("user deleted")
             nav('/user')
